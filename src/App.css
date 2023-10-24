@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-content: center;
+}
+.header {
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+.heading {
+  align-self: center;
+  padding-left: 1rem;
+  word-spacing: 1rem;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+.search {
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  padding: 0.2rem 0 0.2rem 1rem;
+  font-size: large;
+}
+#root {
+  position: relative;
+  height: 100vh;
+  padding: 1rem 0 0 0;
+}
+.footer {
+  background-color: blueviolet;
+  height: 60px;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  bottom: 3%;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.ft-button {
+  width: 8rem;
+  background-color: rgb(80, 9, 167);
+  place-self: center;
+  height: 2rem;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 150%;
+  font-size: larger;
+}
+
+.addbtn {
+  font-size: xx-large;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  outline: none;
+  border: none;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+.data-box {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  padding: 1rem;
+  border-bottom: 1px dashed purple;
+  gap: 1rem;
+}
+.name-box {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+.at {
+  align-self: start;
+  justify-self: end;
+}
+.content-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.btndelete {
+  font-size: large;
+  height: 2rem;
+  padding: 0 1rem;
+  align-self: end;
+  background-color: red;
+  color: white;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.content {
+  align-self: end;
+  width: 28rem;
+  word-wrap: break-word;
+}
+.name {
+  background-color: rgb(63, 63, 236);
+  color: white;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  align-self: start;
+}
+
+@media all and (min-width: 200px) and (max-width: 800px) {
+  #root {
+    width: 96vw;
+  }
+}
+@media all and (min-width: 801px) and (max-width: 999px) {
+  #root {
+    width: 48rem;
+  }
+}
+@media all and (min-width: 1000px) and (max-width: 2000px) {
+  #root {
+    width: 60rem;
+  }
+}
+
+.home-div {
+  height: 70%;
+  overflow-y: scroll;
+  position: relative;
+}
+.about {
+  display: grid;
+  padding: 1rem;
+  row-gap: 2rem;
+  grid-template-columns: repeat(3/1fr);
+}
+.about-heading-2 {
+  justify-self: center;
+  text-transform: capitalize;
+  color: rgb(57, 106, 212);
+}
+
+.about-ul {
+  place-self: start;
+  text-transform: capitalize;
+  grid-column: 2 / span 2;
+  color: rgb(57, 106, 212);
+}
+.about-heading-1 {
+  grid-column: 1 / span 3;
+  text-transform: uppercase;
+  place-self: center;
+  color: rgb(91, 7, 169);
+}
+
+.empty-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.empty-content {
+  text-transform: capitalize;
+}
+
+.form {
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  grid-template-rows: 2fr 4fr 2fr;
+  height: 25rem;
+  width: 25rem;
+}
+.form > textarea {
+  height: 10rem;
+  resize: none;
+  outline: none;
+  width: 100%;
+  border: 2px solid rgb(50, 38, 215);
+  text-indent: 3rem;
+  font-size: 1.5rem;
+  padding: 0.2rem 0 0 0.5rem;
+  word-wrap: break-word;
+  border-radius: 0.2rem;
+  color: blue;
+}
+#input-label {
+  font-size: 2rem;
+  font-weight: 500;
+  width: 20%;
+  color: blue;
+}
+#input-name {
+  border: 2px solid rgb(63, 25, 217);
+  border-radius: 0.5rem;
+  outline: none;
+  width: 75%;
+  font-size: 1.5rem;
+  height: 3rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  text-transform: capitalize;
+  color: blueviolet;
+}
+.input-div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.submit {
+  height: 2.5rem;
+  font-size: larger;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: rgb(130, 110, 222);
+  cursor: pointer;
+  align-self: center;
+  outline: none;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.btnedit {
+  font-size: large;
+  height: 2rem;
+  padding: 0 1rem;
+  align-self: end;
+  background-color: rgb(34, 244, 48);
+  color: white;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.home-btn-div {
+  display: grid;
+  justify-content: center;
+  align-content: end;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.edit-section {
+  height: 28rem;
+  width: 28rem;
+}
