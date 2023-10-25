@@ -16,12 +16,8 @@ const App = () => {
 
   const handlesearch = (x) => {
     const filtereddata = data.filter((e) => {
-      if (
-        e.namee.toLowerCase().includes(x.target.value.toLowerCase()) ||
-        e.content.toLowerCase().includes(x.target.value.toLowerCase())
-      ) {
-        return e;
-      }
+      e.namee.toLowerCase().includes(x.target.value.toLowerCase()) ||
+        e.content.toLowerCase().includes(x.target.value.toLowerCase());
     });
 
     setsearch([...filtereddata]);
