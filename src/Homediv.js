@@ -19,8 +19,10 @@ const Homediv = ({ data, setdata }) => {
     e.preventDefault();
     data.map((e, ix) => {
       if (ix === index) {
-        return (e.namee = namee)((e.content = content));
-      }
+        e.namee = namee;
+        e.content = content;
+        return e;
+      } else return e;
     });
     localStorage.setItem("datalist", JSON.stringify([...data]));
     const databox = document.querySelector(".data-box");
