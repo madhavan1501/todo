@@ -19,8 +19,7 @@ const Homediv = ({ data, setdata }) => {
     e.preventDefault();
     data.map((e, ix) => {
       if (ix === index) {
-        return (e.namee = namee);
-        e.content = content;
+        return (e.namee = namee)((e.content = content));
       }
     });
     localStorage.setItem("datalist", JSON.stringify([...data]));

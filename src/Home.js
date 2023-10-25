@@ -5,7 +5,7 @@ const Home = ({ data, setdata }) => {
   useEffect(() => {
     const localdata = JSON.parse(localStorage.getItem("datalist")) || [];
     setdata([...localdata]);
-  }, [data]);
+  }, [setdata]);
   return (
     <div className="home-div">
       <Homediv data={data} setdata={setdata} />
