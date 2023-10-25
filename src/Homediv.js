@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Homediv = ({ data, setdata }) => {
   const handledelete = (e) => {
-    const filtereddata = data.filter((x, index) => e != index);
+    const filtereddata = data.filter((x, index) => e !== index);
     setdata([...filtereddata]);
     localStorage.setItem("datalist", JSON.stringify([...filtereddata]));
   };
@@ -18,8 +18,8 @@ const Homediv = ({ data, setdata }) => {
   const editContent = (e) => {
     e.preventDefault();
     data.map((e, ix) => {
-      if (ix == index) {
-        e.namee = namee;
+      if (ix === index) {
+        return (e.namee = namee);
         e.content = content;
       }
     });
