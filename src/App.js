@@ -9,17 +9,29 @@ import Newpost from "./Newpost";
 const App = () => {
   const [data, setdata] = useState([]);
   const [search, setsearch] = useState([]);
+
   useEffect(() => {
     setsearch([...data]);
   }, [data]);
+
   const handlesearch = (x) => {
-    const filtereddata = data.filter(
-      (e) =>
-        e.namee.toLowerCase().includes(x.target.value) ||
-        e.content.toLowerCase().includes(x.target.value)
-    );
+    const filtereddata = data.filter((e) => {
+      if (
+        e.namee.toLowerCase().includes(x.target.value.toLowerCase()) ||
+        e.content.toLowerCase().includes(x.target.value.toLowerCase())
+      ) {
+        return e;
+      }
+    });
+
     setsearch([...filtereddata]);
   };
+
+  /*
+
+e.namee.toLowerCase().includes(x.target.value) ||
+        e.content.toLowerCase().includes(x.target.value)*/
+
   return (
     <>
       <Header handleSearch={handlesearch} />
